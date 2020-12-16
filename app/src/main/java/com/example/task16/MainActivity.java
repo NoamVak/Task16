@@ -2,8 +2,11 @@ package com.example.task16;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.TextureView;
 import android.view.View;
 import android.widget.EditText;
@@ -29,8 +32,23 @@ public class MainActivity extends AppCompatActivity {
         RetToApp();
 
     }
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+    public boolean onOptionsItemSelected(MenuItem item){
+        String choice=item.getTitle().toString();
+        if(choice.equals("NextPrevAct")){
+            Intent res=new Intent(this,CreditAct.class);
+            startActivity(res);
+        }
 
-    public void RetToApp(){
+        return true;
+    }
+
+
+
+    private void RetToApp() {
         SharedPreferences prefs_name=getSharedPreferences("NAME_AND_COUNT",MODE_PRIVATE);
         if(prefs_name.getInt("cond",0)==1){
             count=prefs_name.getInt("count",-1);
