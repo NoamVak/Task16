@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Submit. - an On Click method to submit the edit Text input
+     * Submit. - an On Click method which submits the edit Text input
      *
      * @param view the view
      */
