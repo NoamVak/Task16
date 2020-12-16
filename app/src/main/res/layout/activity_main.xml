@@ -21,13 +21,13 @@
         <Space
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="15" />
+            android:layout_weight="5" />
 
         <EditText
-            android:id="@+id/eT"
+            android:id="@+id/name"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="70"
+            android:layout_weight="40"
             android:ems="10"
             android:hint="Name"
             android:inputType="textPersonName" />
@@ -35,7 +35,20 @@
         <Space
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="15" />
+            android:layout_weight="5" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="40"
+            android:onClick="submit"
+            android:text="Submit" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10" />
     </LinearLayout>
 
     <Space
@@ -55,7 +68,7 @@
             android:layout_weight="15" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/countV"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="70"
@@ -88,6 +101,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="60"
+            android:onClick="increaseCount"
             android:text="Count" />
 
         <Space
@@ -118,6 +132,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="60"
+            android:onClick="resetCount"
             android:text="Reset" />
 
         <Space
@@ -147,6 +162,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="60"
+            android:onClick="exit_app"
             android:text="Exit" />
 
         <Space
