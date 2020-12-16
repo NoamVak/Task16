@@ -14,12 +14,17 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+/**
+ *
+ * @author Noam Vaknin <noamvak765@gmail.com>
+ * @version 1.6 (current version number of program) - I don't know exactly what to do here
+ * @since 21 /8/2016 (the date of the package the class was added)
+ */
 public class MainActivity extends AppCompatActivity {
     int count=0;
     TextView countV;
     EditText name;
     String nameInput;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,15 +62,30 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Increase count.
+     *
+     * @param view the view
+     */
     public void increaseCount(View view) {
         countV.setText(" "+count++);
     }
 
+    /**
+     * Reset count.
+     *
+     * @param view the view
+     */
     public void resetCount(View view) {
         count=0;
         countV.setText(" "+count);
     }
 
+    /**
+     * Exit app. - exits the app and saves in SharedPreferences the values of current app
+     *
+     * @param view the view
+     */
     public void exit_app(View view) {
         SharedPreferences prefs_name=getSharedPreferences("NAME_AND_COUNT",MODE_PRIVATE);
         SharedPreferences.Editor editor=prefs_name.edit();
@@ -79,6 +99,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Submit. - an On Click method to submit the edit Text input
+     *
+     * @param view the view
+     */
     public void submit(View view) {
         nameInput= name.getText().toString();
     }
